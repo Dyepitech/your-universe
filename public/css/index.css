@@ -1,0 +1,310 @@
+body {
+    overflow-x: hidden;
+}
+
+/*header de Dylan */
+
+.logo{
+    width: 50%;
+    height: 50%;
+}
+
+.bodpadding {
+    margin:0px;
+    padding:0px !important;
+}
+.dyllogo {
+    width: 300px;
+    height: 50px;
+    margin-left: 40px;
+}
+
+.body-bg {
+    /* background-color: rgb(49, 48, 48); */
+    height: 100vh;
+    background-color: rgb(49, 48, 48);
+    
+}
+
+.menudylan {
+    margin-left: 10px;
+}
+
+
+.social-ntw {
+    width: 30px;
+    height: 30px;
+}
+
+.row {
+    --bs-gutter-x: 2.5rem !important;
+}
+
+
+.containerpad {
+    margin:0px;
+    padding:0px;
+}
+
+.containerHeader{
+    display: flex;
+    
+}
+
+
+
+
+/* Partie Quentin */
+
+.quentcontainer {
+    width: 77%;
+    margin: auto;
+}
+
+.bodybg{
+    background-color: rgb(49, 48, 48);
+    height: 100vh;
+}
+
+.marginR{
+    margin-right: 10px;
+}
+
+.violet{
+    transition: 0.3s;
+}
+
+
+
+.violet:hover, .violet:focus{
+   background-color: #c106ef;
+}
+
+.btnBlack{
+    background-color: rgb(75, 75, 75);
+}
+
+.violetSpan{
+    color: #c106ef;
+}
+
+.imgTaille{
+    width: 100%;
+    height: 200px;
+    background: url(../img/imgtest.jpg);
+    background-size: cover;
+    padding: 0;
+    margin-left: -6px;
+    margin-top: 10px;
+}
+
+.imgTop{
+    margin-top: -7px;
+}
+
+.txtPublication{
+    margin-left: -10px;
+}
+
+.quentinArticle:hover .quentinArticletitre {
+    color: #c106ef !important;
+}
+
+/* Partie Corentin */
+
+.corcontainer{
+    
+    margin: auto;
+    width: 77%;
+    height: 85vh;
+    display: flex;
+    color: white;
+    margin-bottom: 50px;
+}
+.corArticle{
+    background-color: rgb(75, 75, 75);
+    border-radius: 5px;
+    width: 60%;
+}
+.corgreatArticle{
+    background-color: rgb(75, 75, 75);
+    border-radius: 5px;
+    width: 40%;
+    cursor: pointer;
+    
+}
+
+.corgreatArticle:hover .cortitregreat{
+    color: #c106ef;
+}
+
+
+.cortextGreat{
+    padding-left: 10px;
+    position: relative;
+    top: 25px;
+}
+
+.corArticle1{
+    text-overflow: ellipsis;
+    display: flex;
+    cursor: pointer;
+    border-bottom: 1px rgb(49, 48, 48) solid;
+    border-right: 1px rgb(49, 48, 48) solid;
+    height: 25%; 
+}
+
+.corArticle1:hover .cortitle {
+    color: #c106ef;
+}
+
+.cortextArticle1{
+    margin-left: 5%;
+    width: 80%;
+    margin-top: 15px;
+}
+
+.corimgArticle1{
+   
+    width: 130px;
+    object-fit: cover;
+    position: relative;
+    left: 10px;
+    top: 30px;
+   
+
+}
+
+.cordate{
+    position: relative;
+    top: 20px;
+    right: -4px;
+}
+
+.cordateimg {
+    position:relative;
+    top: 24px;
+}
+
+.correadMore{
+    background-color: white;
+    color: black;
+    font-weight:bold;
+    text-align: center;
+    width: 150px;
+    padding: 7px;
+    border-radius: 5px;
+    position: relative;
+    left: 30px;
+    top: 50px;
+    cursor: pointer;
+}
+
+.correadMore:hover {
+    background-color: #c106ef;
+    color: white;
+}
+
+.corzoneimg {
+    width: 130px;
+}
+
+.cortitle {
+    font-size:1.4rem;
+    margin-bottom: 10px;
+}
+
+.cortexte {
+    height: 25px;
+    margin-bottom:0px;
+}
+
+
+.cortitregreat {
+    margin-bottom: 20px;
+}
+
+
+
+/*Style de Steven*/
+
+.body {
+    background-color: #222;
+}
+.container{
+    justify-content: space-between;
+}
+.cardo{
+    color: aliceblue;
+    background-color: rgb(100, 94, 94)!important;
+    height: 85vh;
+    border-radius: 10px 10px 5px 5px
+}
+
+
+#bouton{
+    margin-top: 10px;
+    background-color: #FF4E00;
+    color: dark;
+    border: 2px solid #C106EF;
+    margin-left: 52px;
+}
+
+#bouton:hover, #bouton:focus{
+    border: 2px solid #C106EF;
+    background-color: #C106EF;
+}
+
+
+.card:hover #ttl {
+    color: #C106EF;
+}
+.tof{
+    height: 150px;
+}
+
+#ttl{
+    color: #FF4E00;
+    height: 25%;
+
+}
+
+.textcardsteven {
+    height: 50%
+}
+
+#row{
+    justify-content: center
+}
+
+.footer{
+
+    height: 74px;
+    margin-top: 37px;
+    background-color: black;
+    position: relative;
+}
+#tdr{
+    color:aliceblue;
+    padding: 22px;
+    padding-left: 60px;
+    object-fit: contain;
+    margin-bottom:0px;
+}
+.logo{
+    width: 30px;
+    object-fit:contain;
+    margin-right: 39px;
+}
+footer a{
+    width: 100%;
+    text-decoration: none;
+    padding-right: 42px;
+}
+
+
+
+
+
+
+

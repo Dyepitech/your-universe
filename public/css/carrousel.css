@@ -1,0 +1,95 @@
+
+#fleche {
+    display:flex;
+    width: 30%;
+    justify-content: center;
+    position:absolute;
+    right:0;
+    bottom:47px;
+    margin-right:63px
+
+}
+
+#image {
+    display:flex;
+    width: 100%;
+    justify-content: center;
+ 
+}
+
+#gauche {
+    margin:20px;
+    height: 20px;
+}
+
+#droite {
+    margin: 20px;
+    height: 20px;
+}
+
+#goku {
+    width: 100%;
+    height: 400px;
+    opacity: 1;
+    object-fit: cover;
+    border-bottom: 2px solid black;
+}
+
+#carte {
+    background-color: rgba(0, 0, 0, 0.8);
+    position:absolute;
+    width:42%;
+    height:70%;
+    right: 0;
+    top:0;
+    color: white;
+    margin: 15px;
+    border-radius: 10px 10px 00px 0px;
+}
+
+#carrous {
+    position: relative;
+    -webkit-box-shadow: -1px 5px 3px -1px #000000; 
+    box-shadow: -1px 5px 3px -1px #000000;
+    
+}
+
+#titrecarrous {
+    padding: 15px;
+}
+
+#textcarrous {
+    padding: 15px;
+    padding-top: 0px;
+}
+
+#boutoncarrous {
+    margin: 15px;
+    margin-top: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left:15px;
+    padding-right:15px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#boutoncarrous:hover {
+    color: white;
+}
+
+
+#gokucentre{
+    width:112px;
+}
+
+#gokudroite{
+    width:112px;
+    border-radius: 0px 0px 5px 0px;
+}
+
+#gokugauche{
+    width:112px;
+    border-radius: 0px 0px 0px 5px;
+}
+
