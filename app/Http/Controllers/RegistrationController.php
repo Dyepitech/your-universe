@@ -13,9 +13,9 @@ class RegistrationController extends Controller
      * 
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function show()
     {
-        return view('register');
+        return view('auth.register');
     }
 
     /**
@@ -25,7 +25,6 @@ class RegistrationController extends Controller
      * 
      * @return \Illuminate\Http\Response
      */
-
     public function register(RegisterRequest $request) 
     {
         $user = User::create($request->validated());
