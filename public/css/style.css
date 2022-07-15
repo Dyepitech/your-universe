@@ -8,8 +8,16 @@ body{
     display: flex;
 }
 .containerLeft{
-    border-bottom: 2px solid black;
-    width: 100%;
+    padding: 20px 0;
+    width: 100%; 
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: white;
+    display: flex;
+    justify-content: center;
 }
 .containerRight{
     background-color: #ffffff;
@@ -19,8 +27,7 @@ body{
 header{
     display: flex;
     align-items: center;
-    width: 75%;
-    margin: auto;
+    width: 70%;
 }
 
 .headerTop{
@@ -33,9 +40,10 @@ header{
 }
 
 .headerTop img{
-    width: 10%;
+    width: 14%;
     margin-right: 10px;
     margin-left: 20px;
+    margin-bottom: 10px;
 }
 
 .fontTitle{
@@ -44,69 +52,6 @@ header{
     font-size: 30px;
     color: rgb(230, 169, 55);
     text-shadow: 2px 2px 0 rgb(116, 94, 6);
-}
-
-.cardConnected{  
-    position: relative;
-    margin-top: 50px;
-    height: 200px;
-    width: 200px;
-    border-radius: 15px;
-    background: rgba(0, 0, 0, 0.25);
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 4px );
-    -webkit-backdrop-filter: blur( 4px );
-    border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
-}
-
-.avatar{
-    position: absolute;
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    top: -30px;
-    left: 65px;
-    background-color: #2f2f2fa5;
-}
-
-.glass{
-    position: absolute;
-    top: -34px;
-    left: 61px;
-    width: 75px;
-    height: 75px;
-    background: rgba( 255, 255, 255, 0.25 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 4px );
-    -webkit-backdrop-filter: blur( 1px );
-    border-radius: 50%;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
-}
-
-.pseudo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 35px;
-}
-
-.fa-user{
-    margin-right: 85px;
-    margin-top: -10px;
-    color: #4B4DA4;
-}
-.pseudoFont{
-    font-family: 'Dosis', sans-serif;
-    font-size: 20px;
-}
-
-.rank{
-   margin: -14px 0 0 0;
-   font-size: 14px;
-   font-weight: 700;
-   color: #4B4DA4;
 }
 
 .dosis{
@@ -148,6 +93,8 @@ nav{
     list-style: none;
     transition: 0.3s;
     padding: 10px 0;
+    display: flex;
+    align-items: center;
 }
 
 
@@ -156,6 +103,7 @@ nav{
     justify-content: space-around;
     align-items: center;
     width: 100%;
+    margin-bottom: 0;
 }
 .fa-solid{
     margin-right: 10px;
@@ -195,14 +143,16 @@ nav{
     display: flex;
     justify-content: center;
     width: 100%;
-    margin: 20px 0;
+    margin: 20px 0px 20px 0;
 }
 
 .buttonCategory{
+    width: 300px;
     display: flex;
     align-items: center;
+    justify-content: center;
     position: relative;
-    padding: 14px 30px;
+    padding: 20px 30px;
     background-color: #00000000;
     border-radius: 20px;
     border: 2px solid rgb(0, 0, 0);
@@ -210,14 +160,77 @@ nav{
     font-weight: 700;
     z-index: 1;
     transition: 0.3s;
-    margin: 20px 20px 20px 0 ;
+    margin: 0 10px;
     font-family: 'Dosis', sans-serif;
 }
-.fa-gamepad{
-    margin-right: 10px;
+.txtBtn{
+    text-shadow: 2px 4px 2px rgb(0, 0, 0);
 }
-.fa-twitch{
-    margin-right: 10px;
+.txtBtnPorn{
+    background-color: black;
+    padding: 5px;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+
+
+.games{
+    background: url(../img/jeuvideo.PNG);
+    background-size: cover;
+    background-position: 45% 55%;
+    background-repeat: no-repeat;
+    filter: grayscale(1);
+    color: white;
+    font-size: 20px;
+}
+.games:hover{
+    filter: grayscale(0);
+}
+
+.twitch{
+    background: url(../img/twitch.jpeg);
+    background-size: cover;
+    background-position: 10% 45%;
+    background-repeat: no-repeat;
+    filter: grayscale(1);
+    color: white;
+    font-size: 20px;
+}
+.twitch:hover{
+    filter: grayscale(0);
+}
+
+.manga{
+    background: url(../img/manga.png);
+    background-size: cover;
+    filter: grayscale(1);
+    color: white;
+    font-size: 20px;
+}
+.manga:hover{
+    filter: grayscale(0);
+}
+
+.deco{
+    background: url(../img/deco.png);
+    background-size: cover;
+    filter: grayscale(1);
+    color: white;
+    font-size: 20px;
+}
+.deco:hover{
+    filter: grayscale(0);
+}
+
+.food{
+    background: url(../img/food.jpeg);
+    background-size: cover;
+    filter: grayscale(1);
+    color: white;
+    font-size: 20px;
+}
+.food:hover{
+    filter: grayscale(0);
 }
 
 .buttonCategory:hover{
@@ -231,11 +244,83 @@ nav{
 }
 .orangeBtn{
     background-color: rgb(216, 145, 14);
-    padding: 3px;
-    border-radius: 7px;
+    padding: 5px;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
     color: white;
     font-weight: 700;
 }
+
+#scroll_to_top {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 50px;
+    right: 40px;
+  }
+  #scroll_to_top img {
+    width: 100%;
+    opacity: 0.5;
+    transition: 0.3s;
+  }
+
+  #scroll_to_top img:hover {
+    opacity: 1;
+  }
+   
+
+  .slick-prev:before, .slick-next:before{
+    color: black;
+    font-size: 20px;
+}
+/* .slider{
+    width: 100%;
+    overflow: hidden;
+}
+.containCard
+{
+    width: calc(100% * 2);
+    display: flex;
+    justify-content: space-between;
+  
+}
+.cardGame{
+    width: 30%;
+    background-color: rgb(248, 248, 248);
+    margin-right: 60px;
+    padding: 20px;
+} */
+/* .cardGame img{
+    width: 100%;
+    object-fit: cover;
+} */
+/* 
+.containCard2
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.cont-btn {
+    width: 100%;
+    border: 1px solid #000;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.3);
+    display: flex;
+    justify-content: center;
+  }
+.btn-nav {    
+    font-size: 50px;
+    margin: 0 15px;
+    cursor: pointer;
+}
+.translatePrecedent{
+    transform: translate(100%);
+    transition: 1s;
+}
+.translateSuivant{
+    transform: translate(-50%);
+    transition: 1s;
+} */
 
 @media (max-width: 1260px) {
     header{
