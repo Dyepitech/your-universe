@@ -271,56 +271,41 @@ nav{
 
   .slick-prev:before, .slick-next:before{
     color: black;
-    font-size: 20px;
+    font-size: 30px;
 }
-/* .slider{
-    width: 100%;
-    overflow: hidden;
+
+.slick-prev:before{
+    margin-left: -20px;
 }
-.containCard
-{
-    width: calc(100% * 2);
-    display: flex;
-    justify-content: space-between;
-  
+
+.slide {
+    background-color: rgba(255, 255, 255, 0.4);
+    margin: 10px;
 }
-.cardGame{
-    width: 30%;
-    background-color: rgb(248, 248, 248);
-    margin-right: 60px;
-    padding: 20px;
-} */
-/* .cardGame img{
+
+.slide img {
     width: 100%;
     object-fit: cover;
-} */
-/* 
-.containCard2
-{
+}
+
+.cardGame{
+    background-color: rgb(248, 248, 248);
+} 
+.cardGame img{
     width: 100%;
+    object-fit: cover;
+}
+.containBxTxt{
+    padding: 10px;
+}
+.containBxTxt ul{
     display: flex;
-    justify-content: space-between;
 }
-.cont-btn {
-    width: 100%;
-    border: 1px solid #000;
-    box-shadow: 0 10px 10px rgba(0,0,0,0.3);
-    display: flex;
-    justify-content: center;
-  }
-.btn-nav {    
-    font-size: 50px;
-    margin: 0 15px;
-    cursor: pointer;
+.containBxTxt ul li {
+    list-style: none;
+    margin-right: 5px;
 }
-.translatePrecedent{
-    transform: translate(100%);
-    transition: 1s;
-}
-.translateSuivant{
-    transform: translate(-50%);
-    transition: 1s;
-} */
+
 
 @media (max-width: 1260px) {
     header{
