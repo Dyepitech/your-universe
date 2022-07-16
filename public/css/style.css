@@ -1,0 +1,326 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Dosis', sans-serif;
+}
+.contain{
+    width: 100%;
+    display: flex;
+}
+.containerLeft{
+    padding: 20px 0;
+    width: 100%; 
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+.containerRight{
+    background-color: #ffffff;
+    width: 100%;
+}
+/* PARTIE HEADER A GAUCHE */
+header{
+    display: flex;
+    align-items: center;
+    width: 70%;
+}
+
+.headerTop{
+    display: flex;
+    align-items: center;
+    justify-content:start;
+    margin: 10px;
+    width: 50%;
+    margin: auto;
+}
+
+.headerTop img{
+    width: 14%;
+    margin-right: 10px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.fontTitle{
+    font-family: 'Permanent Marker', cursive;
+    text-transform: uppercase;
+    font-size: 30px;
+    color: rgb(230, 169, 55);
+    text-shadow: 2px 2px 0 rgb(116, 94, 6);
+}
+
+.dosis{
+    font-family: 'Dosis', sans-serif;
+}
+
+.levelBx{
+    display: flex;
+    justify-content: space-around;
+    font-weight: 700;
+}
+
+.indigo{
+    color: #4B4DA4;
+}
+
+.white{
+    color: white;
+}
+
+.whiteDosis{
+    font-family: 'Dosis', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    font-size: 14px;
+}
+/* MENU DE NAVIGATION */
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.menu li{
+    color: rgb(100, 100, 100);
+    font-size: 20px;
+    font-family: 'Dosis', sans-serif;
+    list-style: none;
+    transition: 0.3s;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+
+.menu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 0;
+}
+.fa-solid{
+    margin-right: 10px;
+}
+
+.menu li:hover{
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+.connected{
+    padding: 15px 30px;
+    border: 2px solid rgb(216, 145, 14);
+    background-color: rgb(216, 145, 14);
+    font-family: 'Dosis', sans-serif;
+    font-size: 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+    margin-right: 20px;
+    color: white;
+}
+
+.connected:hover{
+    background-color: #1B1120;
+    color: white;
+    border: 2px solid black;
+}
+
+/* LES DIFFERENTES CATEGORIES ET LES NEWS */
+
+.containerNews{
+    width: 80%;
+    margin: auto;
+}
+.categoryBx{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 20px 0px 20px 0;
+}
+
+.buttonCategory{
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 20px 30px;
+    background-color: #00000000;
+    border-radius: 20px;
+    border: 2px solid rgb(0, 0, 0);
+    text-transform: uppercase;
+    font-weight: 700;
+    z-index: 1;
+    transition: 0.3s;
+    margin: 0 10px;
+    font-family: 'Dosis', sans-serif;
+}
+.txtBtn{
+    text-shadow: 2px 4px 2px rgb(0, 0, 0);
+}
+.txtBtnPorn{
+    background-color: black;
+    padding: 5px;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+
+
+.games{
+    background: url(../img/jeuvideo.PNG);
+    background-size: cover;
+    background-position: 45% 55%;
+    background-repeat: no-repeat;
+    filter: grayscale(1);
+    color: white;
+    font-size: 20px;
+}
+.games:hover{
+    filter: grayscale(0);
+}
+
+.twitch{
+    background: url(../img/twitch.jpeg);
+    background-size: cover;
+    background-position: 10% 45%;
+    background-repeat: no-repeat;
+    filter: grayscale(1);
+    color: white;
+    font-size: 20px;
+}
+.twitch:hover{
+    filter: grayscale(0);
+}
+
+.manga{
+    background: url(../img/manga.png);
+    background-size: cover;
+    filter: grayscale(1);
+    color: white;
+    font-size: 20px;
+}
+.manga:hover{
+    filter: grayscale(0);
+}
+
+.deco{
+    background: url(../img/deco.png);
+    background-size: cover;
+    filter: grayscale(1);
+    color: white;
+    font-size: 20px;
+}
+.deco:hover{
+    filter: grayscale(0);
+}
+
+.food{
+    background: url(../img/food.jpeg);
+    background-size: cover;
+    filter: grayscale(1);
+    color: white;
+    font-size: 20px;
+}
+.food:hover{
+    filter: grayscale(0);
+}
+
+.buttonCategory:hover{
+    cursor: pointer;
+    background-color: #1B1120;
+    color: white;
+}
+.twitch:hover{
+    background-color: #9147FF;
+    color: white;
+}
+.orangeBtn{
+    background-color: rgb(216, 145, 14);
+    padding: 5px;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    color: white;
+    font-weight: 700;
+}
+
+#scroll_to_top {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 50px;
+    right: 40px;
+  }
+  #scroll_to_top img {
+    width: 100%;
+    opacity: 0.5;
+    transition: 0.3s;
+  }
+
+  #scroll_to_top img:hover {
+    opacity: 1;
+  }
+   
+
+  .slick-prev:before, .slick-next:before{
+    color: black;
+    font-size: 30px;
+}
+
+.slick-prev:before{
+    margin-left: -20px;
+}
+
+.slide {
+    background-color: rgba(255, 255, 255, 0.4);
+    margin: 10px;
+}
+
+.slide img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.cardGame{
+    background-color: rgb(248, 248, 248);
+} 
+.cardGame img{
+    width: 100%;
+    object-fit: cover;
+}
+.containBxTxt{
+    padding: 10px;
+}
+.containBxTxt ul{
+    display: flex;
+}
+.containBxTxt ul li {
+    list-style: none;
+    margin-right: 5px;
+}
+
+
+@media (max-width: 1260px) {
+    header{
+        display: flex;
+        flex-direction: column;
+    }
+    .headerTop{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    nav{
+        display: flex;
+        justify-content: center;
+        margin: auto;
+    }
+}
