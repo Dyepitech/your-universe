@@ -24,24 +24,24 @@ class You extends React.Component {
             <div className="container mt-5">
                 <div className="col-12">
                     <div className="row">
-            {this.state.games.map((game, index) =>
-                        <div className="card mb-5 ms-4 d-flex align-self-center nopad" key={index}>
+            {this.state.games.map((game, index) => 
+                        <div className={index % 2 === 0 ? "card mb-5 ms-4 d-flex align-self-center nopad" : "card mb-5 ms-4 d-flex align-self-center nopad impaire" } key={index}>
                             <img src={game.background_image} className="card-img-top" alt="..." />
                                 <div className="card-body ">
                                     <h5 className="card-title d-flex justify-content-center mb-4"><strong>{game.name}</strong></h5>
                                     <div className="rating d-flex justify-content-center mt-2 mb-2">
-                                        {game.rating > 1 ? <span className="d-flex justify-content-center fl fa fa-star checked"></span> : <span className="fa fa-star d-flex justify-content-center"></span>}
-                                        {game.rating > 2 ? <span className="d-flex justify-content-center fa fa-star checked"></span> : <span className="fa fa-star d-flex justify-content-center"></span>}
-                                        {game.rating > 3 ? <span className="d-flex justify-content-center fa fa-star checked"></span> : <span className="fa fa-star d-flex justify-content-center"></span>}
-                                        {game.rating > 4 ? <span className="d-flex justify-content-center fa fa-star checked"></span> : <span className="fa fa-star d-flex justify-content-center"></span>}
-                                        {game.rating > 5 ? <span className="d-flex justify-content-center fa fa-star checked"></span> : <span className="fa fa-star d-flex justify-content-center "></span>}
+                                        {game.rating > 1 ? <span className={index % 2 != 0 ? "d-flex justify-content-center fl fa fa-star checked2" : "d-flex justify-content-center fl fa fa-star checked"}></span> : <span className="fa fa-star d-flex justify-content-center"></span>}
+                                        {game.rating > 2 ? <span className={index % 2 != 0 ? "d-flex justify-content-center fl fa fa-star checked2" : "d-flex justify-content-center fl fa fa-star checked"}></span> : <span className="fa fa-star d-flex justify-content-center"></span>}
+                                        {game.rating > 3 ? <span className={index % 2 != 0 ? "d-flex justify-content-center fl fa fa-star checked2" : "d-flex justify-content-center fl fa fa-star checked"}></span> : <span className="fa fa-star d-flex justify-content-center"></span>}
+                                        {game.rating > 4 ? <span className={index % 2 != 0 ? "d-flex justify-content-center fl fa fa-star checked2" : "d-flex justify-content-center fl fa fa-star checked"}></span> : <span className="fa fa-star d-flex justify-content-center"></span>}
+                                        {game.rating > 5 ? <span className={index % 2 != 0 ? "d-flex justify-content-center fl fa fa-star checked2" : "d-flex justify-content-center fl fa fa-star checked"}></span> : <span className="fa fa-star d-flex justify-content-center"></span>}
                                     </div>
                                     <div className=" mt-4 rating-score d-flex justify-content-center">
                                         <p className="fw-bold">{Math.round(game.rating)} / 5</p>
                                     </div>
                                     <p className="card-text d-flex justify-content-center">Sortis le : {game.released?.slice(0,4)}</p>
                                         <div className="platform d-flex justify-content-center">
-                                            <button type="button" className="btn btn-primary dropdown-toggle fw-bold" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <button type="button" className="btn btn-dark dropdown-toggle fw-bold" data-bs-toggle="dropdown" aria-expanded="false">
                                                 Plateforme
                                             </button>
                                             <div className="btn-group">
@@ -54,7 +54,7 @@ class You extends React.Component {
                                     </div>
                                 </div>
                         </div>
-            )}
+                    )}
                     </div>
                 </div>
             </div>

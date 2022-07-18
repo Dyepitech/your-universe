@@ -87,3 +87,20 @@ h5 {
     padding-right: 0px;
     padding-left: 0px;
 }
+
+.impaire {
+    background-color: #dc9500 !important;
+    color: white !important;
+}
+
+.dropdown-menu {
+    --bs-dropdown-link-hover-bg: #000000 !important;
+    --bs-dropdown-color: #212529 !important;
+    --bs-dropdown-link-color: #212529 !important;
+    --bs-dropdown-link-hover-color: #ffffff !important;
+    --bs-dropdown-link-active-bg: #df9a00 !important;
+}
+
+.checked2 {
+    color: black;
+}
