@@ -43,6 +43,8 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             **/
         Route::get('/blog/articles', 'BlogController@index')->name('blogs.index');
 
+        Route::get('/games', 'GameController@index')->name('game.index');
+
                 /**
                 * Permet de voir un seul article via son ID et on verifie que la {id} doi
                 être un nombre sinon -> 404 error 
