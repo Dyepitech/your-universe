@@ -1,6 +1,7 @@
 import React from 'react';
 import './You.css'
 import axios from 'axios';
+import Loading from './Loading.jsx';
 
 class You extends React.Component {
     constructor(props) {
@@ -8,18 +9,25 @@ class You extends React.Component {
         this.state = {
             games: [{}],
             result: [{}],
+            loading: true,
           };
     }
 
     componentDidMount() {
         let random = Math.floor(Math.random() * 200)
         axios.get('https://api.rawg.io/api/games?key=b7a58e4633904057ad6d089436a2fe3f&' + 'page=' + random).then(reponse => {
-            this.setState({ games: reponse.data.results });
+            this.setState({ 
+                games: reponse.data.results,
+                loading: false,
+            });
             console.log(this.state.games)
         });
     }
 
     render() {
+        if (this.state.loading) {
+            return <div className="container"><Loading /></div>;
+          }
         return (
             <div className="container mt-5">
                 <div className="col-12">
@@ -28,7 +36,7 @@ class You extends React.Component {
                         <div className={index % 2 === 0 ? "card mb-5 ms-4 d-flex align-self-center nopad" : "card mb-5 ms-4 d-flex align-self-center nopad impaire" } key={index}>
                             <img src={game.background_image} className="card-img-top" alt="..." />
                                 <div className="card-body ">
-                                    <h5 className="card-title d-flex justify-content-center mb-4"><strong>{game.name}</strong></h5>
+                                    <h5 className="card-title d-flex justify-content-center mb-4 card-text"><strong>{game.name}</strong></h5>
                                     <div className="rating d-flex justify-content-center mt-2 mb-2">
                                         {game.rating > 1 ? <span className={index % 2 != 0 ? "d-flex justify-content-center fl fa fa-star checked2" : "d-flex justify-content-center fl fa fa-star checked"}></span> : <span className="fa fa-star d-flex justify-content-center"></span>}
                                         {game.rating > 2 ? <span className={index % 2 != 0 ? "d-flex justify-content-center fl fa fa-star checked2" : "d-flex justify-content-center fl fa fa-star checked"}></span> : <span className="fa fa-star d-flex justify-content-center"></span>}

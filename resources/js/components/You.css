@@ -104,3 +104,8 @@ h5 {
 .checked2 {
     color: black;
 }
+
+.card-text {
+    white-space: pre-wrap !important;
+    text-align: center !important;
+}
