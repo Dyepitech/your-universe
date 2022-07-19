@@ -3,6 +3,7 @@
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\RegistrationController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\GamesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -44,6 +45,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
         Route::get('/blog/articles', 'BlogController@index')->name('blogs.index');
 
         Route::get('/games', 'GameController@index')->name('game.index');
+        Route::get('/fetch', 'GamesController@fetch');
 
                 /**
                 * Permet de voir un seul article via son ID et on verifie que la {id} doi
@@ -51,7 +53,6 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
                 **/
         Route::get('/blog/articles/{id}', 'BlogController@show')->name('blogs.show');
         
-
     });
 
     Route::group(['middleware' => ['auth']], function() {

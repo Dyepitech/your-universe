@@ -49,7 +49,7 @@ class You extends React.Component {
                                     </div>
                                     <p className="card-text d-flex justify-content-center">Sortis le : {game.released?.slice(0,4)}</p>
                                         <div className="platform d-flex justify-content-center">
-                                            <button type="button" className="btn btn-dark dropdown-toggle fw-bold" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <button type="button" className={index % 2 == 0 ? "btn btn-dark dropdown-toggle fw-bold" : "btn btn-dark dropdown-toggle fw-bold btn-impaire"} data-bs-toggle="dropdown" aria-expanded="false">
                                                 Plateforme
                                             </button>
                                             <div className="btn-group">

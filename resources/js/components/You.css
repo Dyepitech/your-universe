@@ -93,6 +93,11 @@ h5 {
     color: white !important;
 }
 
+.btn-impaire {
+    --bs-btn-color: #000 !important;
+    --bs-btn-bg: #ffffff!important;
+}
+
 .dropdown-menu {
     --bs-dropdown-link-hover-bg: #000000 !important;
     --bs-dropdown-color: #212529 !important;
