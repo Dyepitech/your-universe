@@ -25,11 +25,12 @@ return new class extends Migration
             $table->integer('ratings_count');
             $table->integer('reviews_text_count');
             $table->integer('added');
-            $table->integer('metacritic');
+            $table->integer('metacritic')->nullable();
             $table->integer('playtime');
             $table->integer('suggestions_count');
             $table->string('updated');
             $table->integer('reviews_count');
+            $table->integer('from_api_page');
             $table->timestamps();
         });
     }
