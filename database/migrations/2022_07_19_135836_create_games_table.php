@@ -16,21 +16,21 @@ return new class extends Migration
         Schema::create('games', function (Blueprint $table) {
             $table->id();
             $table->integer('game_id');
-            $table->string('slug');
-            $table->string('name');
-            $table->date('released');
-            $table->string('background_image');
-            $table->float('rating');
-            $table->float('rating_top');
+            $table->string('slug')->nullable();;
+            $table->string('name')->nullable();;
+            $table->date('released')->nullable();;
+            $table->string('background_image')->nullable();;
+            $table->float('rating')->nullable();;
+            $table->float('rating_top')->nullable();;
             $table->integer('ratings_count');
-            $table->integer('reviews_text_count');
-            $table->integer('added');
+            $table->integer('reviews_text_count')->nullable();;
+            $table->integer('added')->nullable();;
             $table->integer('metacritic')->nullable();
-            $table->integer('playtime');
-            $table->integer('suggestions_count');
-            $table->string('updated');
-            $table->integer('reviews_count');
-            $table->integer('from_api_page');
+            $table->integer('playtime')->nullable();;
+            $table->integer('suggestions_count')->nullable();;
+            $table->string('updated')->nullable();;
+            $table->integer('reviews_count')->nullable();;
+            $table->integer('from_api_page')->nullable();;
             $table->timestamps();
         });
     }

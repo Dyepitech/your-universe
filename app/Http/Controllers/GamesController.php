@@ -15,6 +15,16 @@ use App\Models\GameTags;
 
 class GamesController extends Controller
 {
+
+    public function isAlreadyExist($id)
+    {
+        $games = Games::where('game_id', '=', $id)->exists();
+        if ($games)
+            return true;
+        else
+            return false;
+    }
+
     public function saveGame($allgame, $i)
     {
         $game = new Games;
@@ -359,22 +369,29 @@ class GamesController extends Controller
 
     public function fetch()
     {
-        // for ($i = 1; $i < 10; $i++){
-            $response = Http::get('https://api.rawg.io/api/games?', [
+        // ini_set('max_execution_time', 3600);
+        for ($i = 1; $i < 2; $i++){
+            $response = Http::get('https://api.rawg.io/api/games/search/', [
                 'key' => 'b7a58e4633904057ad6d089436a2fe3f',
-                'page' => 1,
+                'page' => $i,
             ]);
-
-            $allgames = json_decode($response->body());
-            foreach ($allgames->results as $index => $allgame) {
-                //DONE$this->getRatings($allgame, $allgame->id);
-                //DONE $this->getPlatforms($allgame, $allgame->id);
-                //DONE$this->getGenres($allgame, $allgame->id);
-                //DONE$this->getTags($allgame, $allgame->id);
-                //DONE$this->saveGame($allgame, $i);
-                $this->getScreens($allgame, $allgame->id);
-                dd($allgame);
+            if ($response->successful() == true){
+                $allgames = json_decode($response->body());
+                foreach ($allgames->results as $index => $allgame) {
+                    if($this->isAlreadyExist($allgame->id) == false) {
+                        $this->getRatings($allgame, $allgame->id);
+                        $this->getPlatforms($allgame, $allgame->id);
+                        $this->getGenres($allgame, $allgame->id);
+                        $this->getTags($allgame, $allgame->id);
+                        $this->saveGame($allgame, $i);
+                        $this->getScreens($allgame, $allgame->id);
+                        $this->getStores($allgame, $allgame->id);
+                    }
+                }
             }
-        //}
+            else {
+                return;
+            }
+        }
     }
 }
